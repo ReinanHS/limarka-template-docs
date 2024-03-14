@@ -27,7 +27,7 @@ jobs:
           path: "./v120"
 
       - name: Copiando arquivos
-        run: mv ./v120/* ./versioned_docs/version-1.2.0
+        run: mv ./v120/docs/* ./versioned_docs/version-1.2.0
 
       - uses: actions/setup-node@v4
         with:
