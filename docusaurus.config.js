@@ -45,8 +45,8 @@ const config = {
           includeCurrentVersion: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/ReinanHS/limarka-template-tcc/tree/master/docs/',
+          editUrl: ({versionDocsDirPath, docPath}) =>
+            `https://github.com/ReinanHS/limarka-template-tcc/tree/${versionDocsDirPath.replace('versioned_docs/version-', 'v')}/docs/${docPath}`,
         },
         blog: false,
         theme: {
