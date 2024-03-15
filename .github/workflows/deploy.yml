@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 permissions:
   contents: write
@@ -19,16 +17,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout Limarka Template TCC
-        uses: actions/checkout@v4
-        with:
-          repository: ReinanHS/limarka-template-tcc
-          ref: "V1.2.0"
-          path: "./v120"
-
-      - name: Copiando arquivos
-        run: mv ./v120/docs/* ./versioned_docs/version-1.2.0
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -36,6 +24,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Copiando arquivos
+        run: npm run import
 
       - name: Build website
         run: npm run build
