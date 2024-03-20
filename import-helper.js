@@ -4,7 +4,7 @@ const axios = require("axios");
 const tar = require('tar');
 
 // Array de tags a serem ignoradas. Substitua os valores conforme necessário.
-const IGNORE_TAGS = ["v0.0.1", "v1.0.0", "v1.1.0"];
+const IGNORE_TAGS = ["v0.0.1", "v1.0.0", "v1.1.0", "v1.2.0"];
 const REPO_NAME = "ReinanHS/limarka-template-tcc";
 
 // Função para verificar se a tag está na lista de ignorados
@@ -18,8 +18,8 @@ function compareVersions(a, b) {
   const partsB = b.split(".").map(Number);
 
   for (let i = 0; i < partsA.length; i++) {
-    if (partsA[i] > partsB[i]) return 1;
-    if (partsA[i] < partsB[i]) return -1;
+    if (partsA[i] < partsB[i]) return 1;
+    if (partsA[i] > partsB[i]) return -1;
   }
 
   return 0;
