@@ -17,9 +17,9 @@
     "import": "node import-helper.js"
   },
   "dependencies": {
-    "@docusaurus/core": "3.1.1",
-    "@docusaurus/plugin-content-docs": "^3.1.1",
-    "@docusaurus/preset-classic": "3.1.1",
+    "@docusaurus/core": "^3.2.1",
+    "@docusaurus/plugin-content-docs": "^3.2.1",
+    "@docusaurus/preset-classic": "^3.2.1",
     "@mdx-js/react": "^3.0.0",
     "axios": "^1.6.7",
     "clsx": "^2.0.0",
@@ -29,8 +29,8 @@
     "tar": "^6.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.1.1",
-    "@docusaurus/types": "3.1.1",
+    "@docusaurus/module-type-aliases": "^3.2.1",
+    "@docusaurus/types": "^3.2.1",
     "markdownlint-cli2": "^0.12.1"
   },
   "browserslist": {
