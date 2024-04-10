@@ -4,7 +4,14 @@ const axios = require("axios");
 const tar = require('tar');
 
 // Array de tags a serem ignoradas. Substitua os valores conforme necessário.
-const IGNORE_TAGS = ["v0.0.1", "v1.0.0", "v1.1.0", "v1.2.0", "v1.2.1"];
+const IGNORE_TAGS = [
+  "v0.0.1", 
+  "v1.0.0", 
+  "v1.1.0", 
+  "v1.2.0", 
+  "v1.2.1",
+  "v1.2.2",
+];
 const REPO_NAME = "ReinanHS/limarka-template-tcc";
 
 // Função para verificar se a tag está na lista de ignorados
