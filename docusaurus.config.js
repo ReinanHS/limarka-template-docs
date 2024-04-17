@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Limarka Docs',
+  title: 'Limarka Template TCC Docs',
   tagline: 'Documentação para o modelo de trabalho acadêmico com o Limarka',
   favicon: 'img/favicon.ico',
 
@@ -62,7 +62,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Limarka Docs',
+        title: 'Limarka Template TCC',
         logo: {
           alt: 'Limarka Template TCC Logo',
           src: 'img/logo.png',
