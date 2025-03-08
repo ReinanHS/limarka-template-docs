@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import Link from "@docusaurus/Link";
+import FAQSection from "../components/Homepage/FAQ";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -80,6 +81,7 @@ export default function Home({ homePageBlogMetadata, recentPosts }) {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <FAQSection />
       </main>
     </Layout>
   );
