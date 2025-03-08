@@ -41,11 +41,11 @@ const config = {
           customCss: "./src/css/custom.css",
         },
         gtag: {
-          trackingID: "G-999X9XX9XX",
+          trackingID: "G-XW7JZ56BFS",
           anonymizeIP: true,
         },
         googleTagManager: {
-          containerId: "GTM-12345",
+          containerId: "GTM-5D4XM9V7",
         },
         sitemap: {
           lastmod: "date",
