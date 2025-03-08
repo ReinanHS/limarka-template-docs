@@ -71,6 +71,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      defaultMode: "dark",
       image: "img/vixetext-social-card.jpg",
       metadata: [
         {
@@ -130,12 +131,12 @@ const config = {
           },
           {
             label: "Sobre",
-            to: "about",
+            to: "sobre",
             position: "left",
           },
           {
             label: "Patrocinar",
-            to: "sponsor",
+            to: "patrocinador",
             position: "left",
           },
           // right
