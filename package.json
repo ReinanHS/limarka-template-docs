@@ -17,9 +17,20 @@
     "import": "node import-helper.js"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.2.1",
-    "@docusaurus/plugin-content-docs": "^3.2.1",
-    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/faster": "^3.7.0",
+    "@docusaurus/plugin-ideal-image": "^3.7.0",
+    "@docusaurus/remark-plugin-npm2yarn": "^3.7.0",
+    "@easyops-cn/docusaurus-search-local": "^0.48.5",
+    "@docusaurus/plugin-content-docs": "^3.7.0",
+    "@docusaurus/plugin-google-gtag": "^3.7.0",
+    "@docusaurus/plugin-google-tag-manager": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@mdx-js/react": "^3.0.0",
     "axios": "^1.6.7",
     "clsx": "^2.0.0",
@@ -29,9 +40,15 @@
     "tar": "^6.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.2.1",
-    "@docusaurus/types": "^3.2.1",
-    "markdownlint-cli2": "^0.12.1"
+    "@docusaurus/module-type-aliases": "^3.7.0",
+    "@docusaurus/types": "^3.7.0",
+    "@tailwindcss/postcss": "^4.0.7",
+    "markdownlint-cli2": "^0.12.1",
+    "postcss": "^8.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.7",
+    "tailwindcss-animate": "^1.0.7"
   },
   "browserslist": {
     "production": [
