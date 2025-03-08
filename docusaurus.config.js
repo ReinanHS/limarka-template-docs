@@ -71,7 +71,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      defaultMode: "dark",
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       image: "img/vixetext-social-card.jpg",
       metadata: [
         {
@@ -179,20 +183,14 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: [
-          'powershell',
-          'bash',
-          'json',
-          'yaml',
-          'markdown',
-        ]
+        additionalLanguages: ["powershell", "bash", "json", "yaml", "markdown"],
       },
     }),
 
   plugins: [
     ["./src/plugins/tailwind-config.js", {}],
     [
-      'ideal-image',
+      "ideal-image",
       /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
       ({
         quality: 70,
@@ -200,8 +198,8 @@ const config = {
         min: 640,
         steps: 2,
         // Use false to debug, but it incurs huge perf costs
-        disableInDev: true
-      })
+        disableInDev: true,
+      }),
     ],
   ],
 

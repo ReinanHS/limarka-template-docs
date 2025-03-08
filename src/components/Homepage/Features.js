@@ -34,7 +34,7 @@ export default function FeaturesSection() {
         <div className="flex flex-wrap -mx-4">
           {/* 1. Funcionalidade */}
           <div className="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div className="mb-12 wow fadeInUp group" data-wow-delay=".1s">
+            <div className="mb-12 wow fadeInUp group flex flex-col items-center" data-wow-delay=".1s">
               <div className="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary dark:bg-violet-900">
                 <span className="absolute left-0 top-0 -z-1 mb-8 flex h-[70px] w-[70px] 
                   rotate-[25deg] items-center justify-center rounded-[14px] 
@@ -64,7 +64,7 @@ export default function FeaturesSection() {
 
           {/* 2. Funcionalidade */}
           <div className="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div className="mb-12 wow fadeInUp group" data-wow-delay=".15s">
+            <div className="mb-12 wow fadeInUp group flex flex-col items-center" data-wow-delay=".15s">
               <div className="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary dark:bg-violet-900">
                 <span className="absolute left-0 top-0 -z-1 mb-8 flex h-[70px] w-[70px] 
                   rotate-[25deg] items-center justify-center rounded-[14px] 
@@ -95,7 +95,7 @@ export default function FeaturesSection() {
 
           {/* 3. Funcionalidade */}
           <div className="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div className="mb-12 wow fadeInUp group" data-wow-delay=".2s">
+            <div className="mb-12 wow fadeInUp group flex flex-col items-center" data-wow-delay=".2s">
               <div className="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary dark:bg-violet-900">
                 <span className="absolute left-0 top-0 -z-1 mb-8 flex h-[70px] w-[70px] 
                   rotate-[25deg] items-center justify-center rounded-[14px] 
@@ -125,7 +125,7 @@ export default function FeaturesSection() {
 
           {/* 4. Funcionalidade */}
           <div className="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div className="mb-12 wow fadeInUp group" data-wow-delay=".25s">
+            <div className="mb-12 wow fadeInUp group flex flex-col items-center" data-wow-delay=".25s">
               <div className="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary dark:bg-violet-900">
                 <span className="absolute left-0 top-0 -z-1 mb-8 flex h-[70px] w-[70px] 
                   rotate-[25deg] items-center justify-center rounded-[14px] 
