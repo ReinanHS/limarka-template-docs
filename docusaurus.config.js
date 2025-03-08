@@ -68,6 +68,8 @@ const config = {
     ],
   ],
 
+  // themes: ['@docusaurus/theme-search-algolia'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -76,7 +78,9 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
+      
       image: "img/vixetext-social-card.jpg",
+      
       metadata: [
         {
           name: "description",
@@ -117,6 +121,12 @@ const config = {
           content: "https://vixetext.com/img/vixetext-social-card.jpg",
         },
       ],
+
+      // algolia: {
+      //   appId: 'YOUR_APP_ID',
+      //   apiKey: 'YOUR_SEARCH_API_KEY',
+      //   indexName: 'YOUR_INDEX_NAME',
+      // },
 
       navbar: {
         title: "VixeText",
@@ -200,6 +210,13 @@ const config = {
         // Use false to debug, but it incurs huge perf costs
         disableInDev: true,
       }),
+    ],
+    [
+      "vercel-analytics",
+      {
+        debug: true,
+        mode: "auto",
+      },
     ],
   ],
 
