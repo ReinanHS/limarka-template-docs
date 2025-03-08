@@ -11,6 +11,8 @@ const IGNORE_TAGS = [
   "v1.2.0", 
   "v1.2.1",
   "v1.2.2",
+  "v1.2.3",
+  "v1.2.4",
 ];
 const REPO_NAME = "ReinanHS/limarka-template-tcc";
 
