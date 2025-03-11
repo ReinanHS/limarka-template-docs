@@ -68,8 +68,6 @@ const config = {
     ],
   ],
 
-  // themes: ['@docusaurus/theme-search-algolia'],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -122,11 +120,12 @@ const config = {
         },
       ],
 
-      // algolia: {
-      //   appId: 'YOUR_APP_ID',
-      //   apiKey: 'YOUR_SEARCH_API_KEY',
-      //   indexName: 'YOUR_INDEX_NAME',
-      // },
+      algolia: {
+        appId: 'XTRA0Z7Q21',
+        apiKey: '19064cb0ab86b5f17db15fc704ae84da',
+        indexName: 'vixetext',
+        contextualSearch: true,
+      },
 
       navbar: {
         title: "VixeText",
