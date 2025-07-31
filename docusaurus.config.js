@@ -8,8 +8,8 @@ const config = {
   favicon: "img/favicon.ico",
   url: "https://vixetext.com",
   baseUrl: "/",
-  organizationName: "reinanhs",
-  projectName: "limarka-template-tcc",
+  organizationName: "vixetext",
+  projectName: "vixetext-template",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -19,7 +19,10 @@ const config = {
   },
 
   // Enable Docusaurs Faster: https://github.com/facebook/docusaurus/issues/10556
-  future: { experimental_faster: true },
+  future: {
+    v4: true,
+    experimental_faster: false,
+  },
 
   presets: [
     [
@@ -31,7 +34,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           includeCurrentVersion: false,
           editUrl: ({ versionDocsDirPath, docPath }) =>
-            `https://github.com/ReinanHS/limarka-template-tcc/tree/${versionDocsDirPath.replace(
+            `https://github.com/vixetext/vixetext-template/tree/${versionDocsDirPath.replace(
               "versioned_docs/version-",
               "v"
             )}/docs/${docPath}`,
@@ -158,7 +161,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/reinanhs/limarka-template-tcc",
+            href: "https://github.com/vixetext/vixetext-template",
             position: "right",
             className: "header-github-link",
           },
@@ -181,7 +184,7 @@ const config = {
               },
               {
                 label: "Github Discussions",
-                href: "https://github.com/ReinanHS/limarka-template-tcc/discussions",
+                href: "https://github.com/vixetext/vixetext-template/discussions",
               },
             ],
           },
