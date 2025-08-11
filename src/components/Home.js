@@ -1,12 +1,3 @@
-// IMPORTANTE: para o dark mode funcionar com o Docusaurus,
-// ajuste o tailwind.config.js:
-//   module.exports = {
-//     darkMode: ['class', '[data-theme="dark"]'],
-//     ...
-//   }
-// O Docusaurus aplica data-theme="dark" no <html>, então
-// as classes `dark:` do Tailwind passam a funcionar.
-
 import React from "react";
 
 // Small, reusable UI atoms
@@ -83,15 +74,63 @@ export default function Home() {
       {/* TRUST STRIP */}
       <section className="bg-white/80 dark:bg-slate-800/50">
         <Container className="py-10">
-          <p className="text-center text-sm text-slate-600 dark:text-slate-300">Utilizado por alunos e professores para criar e padronizar trabalhos acadêmicos.</p>
+          <p className="text-center text-sm text-slate-600 dark:text-slate-300">
+            Utilizado por alunos e professores para criar e padronizar trabalhos acadêmicos.
+          </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-8 opacity-80">
-            <img src="/img/crests/ifs.png" alt="Instituto Federal de Educação, Ciência e Tecnologia de Sergipe" className="h-8" />
-            <img src="/img/crests/ufs.png" alt="Universidade Federal de Sergipe" className="h-8" />
-            <img src="/img/crests/ifba.png" alt="Instituto Federal de Educação, Ciência e Tecnologia da Bahia" className="h-8" />
-            <img src="/img/crests/ufc.png" alt="Universidade Federal do Ceará" className="h-8" />
+
+            {/* IFS */}
+            <img
+              src="/img/crests/ifs.png"
+              alt="Instituto Federal de Educação, Ciência e Tecnologia de Sergipe"
+              className="h-8 dark:hidden"
+            />
+            <img
+              src="/img/crests/ifs-dark.svg"
+              alt="Instituto Federal de Educação, Ciência e Tecnologia de Sergipe - Dark"
+              className="h-8 hidden dark:block"
+            />
+
+            {/* UFS */}
+            <img
+              src="/img/crests/ufs.png"
+              alt="Universidade Federal de Sergipe"
+              className="h-8 dark:hidden"
+            />
+            <img
+              src="/img/crests/ufs-dark.svg"
+              alt="Universidade Federal de Sergipe - Dark"
+              className="h-8 hidden dark:block"
+            />
+
+            {/* IFBA */}
+            <img
+              src="/img/crests/ifba.png"
+              alt="Instituto Federal de Educação, Ciência e Tecnologia da Bahia"
+              className="h-8 dark:hidden"
+            />
+            <img
+              src="/img/crests/ifba-dark.png"
+              alt="Instituto Federal de Educação, Ciência e Tecnologia da Bahia - Dark"
+              className="h-8 hidden dark:block"
+            />
+
+            {/* UFC */}
+            <img
+              src="/img/crests/ufc.png"
+              alt="Universidade Federal do Ceará"
+              className="h-8 dark:hidden"
+            />
+            <img
+              src="/img/crests/ufc-dark.png"
+              alt="Universidade Federal do Ceará - Dark"
+              className="h-8 hidden dark:block"
+            />
+
           </div>
         </Container>
       </section>
+
 
       {/* FEATURES */}
       <section>
