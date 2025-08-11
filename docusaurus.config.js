@@ -37,7 +37,7 @@ const config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           editUrl: ({ versionDocsDirPath, docPath }) =>
-            `https://github.com/vixetext/vixetext-template/tree/main/docs/${docPath}`,
+            `https://github.com/vixetext/vixetext-template/tree/master/docs/${docPath}`,
         },
         blog: false,
         theme: {
