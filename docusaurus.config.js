@@ -18,10 +18,11 @@ const config = {
     locales: ["pt-BR"],
   },
 
-  // Enable Docusaurs Faster: https://github.com/facebook/docusaurus/issues/10556
   future: {
-    v4: true,
-    experimental_faster: false,
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: false,
+    },
   },
 
   presets: [
@@ -33,15 +34,14 @@ const config = {
           routeBasePath: "/",
           sidebarPath: "./sidebars.js",
           includeCurrentVersion: false,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           editUrl: ({ versionDocsDirPath, docPath }) =>
-            `https://github.com/vixetext/vixetext-template/tree/${versionDocsDirPath.replace(
-              "versioned_docs/version-",
-              "v"
-            )}/docs/${docPath}`,
+            `https://github.com/vixetext/vixetext-template/tree/main/docs/${docPath}`,
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
           trackingID: "G-XW7JZ56BFS",
@@ -79,9 +79,9 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
-      
+
       image: "img/vixetext-social-card.jpg",
-      
+
       metadata: [
         {
           name: "description",
@@ -168,28 +168,68 @@ const config = {
         ],
       },
 
+      announcementBar: {
+        id: 'announcement-bar',
+        content:
+          '💬 Participe! Junte-se à comunidade do VixeText e ajude a melhorar a ferramenta. <a target="_blank" rel="noopener noreferrer" href="https://github.com/vixetext/vixetext-template/discussions">Entrar na comunidade</a>',
+      },
+
       footer: {
-        style: "dark",
+        // use 'dark' ou 'light' – a cor real vamos forçar via CSS abaixo
+        style: 'dark',
+
+        logo: {
+          alt: 'VixeText',
+          src: 'img/logo-text-dark.png',
+          href: '/', // link do logo
+          width: 120,
+          height: 32,
+        },
+
         links: [
           {
-            title: "Comunidade",
+            title: 'VixeText',
             items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/limarka",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/limarka",
-              },
-              {
-                label: "Github Discussions",
-                href: "https://github.com/vixetext/vixetext-template/discussions",
-              },
+              { label: 'Sobre', to: '/sobre' },
+              // { label: 'Blog', to: '/blog' },
+              { label: 'Patrocinar', to: '/patrocinador' },
+            ],
+          },
+          {
+            title: 'Soluções',
+            items: [
+              { label: 'Para estudantes', to: '/solucoes/para-estudantes' },
+              { label: 'Para professores', to: '/solucoes/para-professores' },
+              { label: 'Templates', to: '/category/tipos-de-trabalhos' },
+            ],
+          },
+          {
+            title: 'Aprender',
+            items: [
+              { label: 'Comece em 30 min', to: '/comecando/guia-de-inicio-rapido' },
+              { label: 'Tutoriais', to: '/comecando/tutorial' },
+              { label: 'Citações/BibTeX', to: '/criando-um-documento/elementos-pos-textuais/referencias' },
+            ],
+          },
+          {
+            title: 'Comunidade',
+            items: [
+              { label: 'GitHub', href: 'https://github.com/vixetext/vixetext-template/discussions' },
+              { label: 'Discord', href: 'https://discord.gg/abcdef123456' },
+            ],
+          },
+          {
+            title: 'Ajuda',
+            items: [
+              { label: 'Documentação', to: '/docs' },
+              { label: 'Licença do software', href: 'https://github.com/vixetext/vixetext-template/blob/master/LICENSE' },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ReinanHS, Inc. Built with Docusaurus.`,
+
+        copyright: `
+        © ${new Date().getFullYear()} VixeText · Feito com ❤️ para estudantes e pesquisadores.
+        `,
       },
 
       prism: {
@@ -200,7 +240,7 @@ const config = {
     }),
 
   plugins: [
-    ["./src/plugins/tailwind-config.js", {}],
+    require.resolve('./plugins/tailwindPlugin'),
     [
       "ideal-image",
       /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
@@ -228,6 +268,39 @@ const config = {
       attributes: {
         rel: "canonical",
         href: "https://vixetext.com",
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: 'img/favicon/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: 'img/favicon/favicon-32x32.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: 'img/favicon/favicon-16x16.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: 'img/favicon/site.webmanifest',
       },
     },
     {
