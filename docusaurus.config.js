@@ -155,6 +155,11 @@ const config = {
             to: "patrocinador",
             position: "left",
           },
+          {
+            label: "Playground",
+            href: "https://editor.vixetext.com",
+            position: "left",
+          },
           // right
           {
             type: "docsVersionDropdown",

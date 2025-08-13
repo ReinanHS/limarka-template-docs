@@ -103,3 +103,14 @@
   color: #ffffff;
   box-shadow: 0 0 0 2px rgba(251, 191, 36, .18) inset;
 }
+
+.navbar__link {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 996px) {
+  .navbar__link {
+    display: none;
+  }
+}
